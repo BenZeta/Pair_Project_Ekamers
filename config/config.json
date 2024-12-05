@@ -15,6 +15,12 @@
   },
   "production": {
     "use_env_variable": "DATABASE_PRODUCTION",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   }
 }
