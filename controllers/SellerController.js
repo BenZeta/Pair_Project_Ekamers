@@ -9,6 +9,8 @@ class SellerController {
       }
 
       const categories = await Category.findAll();
+      console.log(categories);
+
       res.render("sellers/addProduct.ejs", { categories, errors });
     } catch (error) {
       res.send(error);
