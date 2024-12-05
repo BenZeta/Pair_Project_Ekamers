@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>User Profile</title>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <nav class="navbar bg-white shadow-md p-4">
+      <div class="flex justify-between items-center w-full">
+        <a href="/" class="text-2xl font-bold text-lime-600">Ekamers</a>
+      </div>
+    </nav>
+
+    <div class="flex justify-center items-center min-h-[calc(100vh-4rem)] mt-6">
+      <div class="card bg-white shadow-lg p-6 w-full max-w-3xl rounded-md">
+        <div class="flex justify-center">
+          <img id="profileImg" src="<%= user.Profile.profileImg %>" alt="Profile Picture" class="w-32 h-32 rounded-full border-2 border-lime-600 object-cover mb-4" />
+        </div>
+        <h2 class="text-2xl font-semibold text-lime-600 mb-6 text-center">Your Profile</h2>
+
+        <form action="/profile" method="POST" class="grid grid-cols-2 gap-6">
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text text-gray-700">Username</span>
+            </label>
+            <input type="text" name="username" value="<%= user.Profile.username %>" class="bg-white input input-bordered border-lime-600 focus:ring-lime-500" placeholder="Enter your username" />
+          </div>
+
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text text-gray-700">Email</span>
+            </label>
+            <input type="email" name="email" value="<%= user.email %>" class="bg-white input input-bordered border-lime-600 focus:ring-lime-500" placeholder="Enter your email" />
+          </div>
+
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text text-gray-700">Password</span>
+            </label>
+            <input type="password" name="password" value="<%= user.password %>" class="bg-white input input-bordered border-lime-600 focus:ring-lime-500" placeholder="Create a password" />
+          </div>
+
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text text-gray-700">Image URL</span>
+            </label>
+            <input type="text" name="profileImg" value="<%= user.Profile.profileImg %>" class="bg-white input input-bordered border-lime-600 focus:ring-lime-500" placeholder="Enter image URL" />
+          </div>
+
+          <div class="col-span-2 flex justify-between items-center space-x-4 mt-6">
+            <a href="/home" class="btn bg-gray-600 text-white hover:bg-gray-700 transition-all duration-300 ease-in-out transform hover:scale-105 px-6 py-3 rounded-lg shadow-lg"> Back </a>
+            <button type="submit" class="btn bg-lime-600 text-white hover:bg-lime-700 transition-all duration-300 ease-in-out transform hover:scale-105 px-6 py-3 rounded-lg shadow-lg">Update Profile</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

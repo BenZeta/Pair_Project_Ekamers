@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Eco-Friendly Water Bottle",
+    "description": "A reusable, eco-friendly water bottle made of stainless steel.",
+    "price": 250000,
+    "totalUpVote": 120,
+    "CategoryId": 1,
+    "productImg": "https://th.bing.com/th/id/OIP.ACL70t7kipxLX3LF3p-kGAHaLH?w=121&h=182&c=7&r=0&o=5&dpr=1.5&pid=1.7",
+    "stock": 50
+  },
+  {
+    "id": 2,
+    "name": "Noise-Cancelling Headphones",
+    "description": "Wireless headphones with advanced noise-cancellation technology.",
+    "price": 2500000,
+    "totalUpVote": 85,
+    "CategoryId": 2,
+    "productImg": "https://th.bing.com/th/id/OIP.rAMTGHyyjcQYqHvxFXmeqQHaHa?w=209&h=209&c=7&r=0&o=5&dpr=1.5&pid=1.7",
+    "stock": 30
+  },
+  {
+    "id": 3,
+    "name": "Smart Fitness Tracker",
+    "description": "A sleek fitness tracker with heart rate monitoring and GPS.",
+    "price": 750000,
+    "totalUpVote": 10,
+    "CategoryId": 1,
+    "productImg": "https://th.bing.com/th/id/OIP.DC7av7ut4Ay4Zq9CY6bFUAHaJR?w=149&h=187&c=7&r=0&o=5&dpr=1.5&pid=1.7",
+    "stock": 100
+  },
+  {
+    "id": 4,
+    "name": "Adjustable Standing Desk",
+    "description": "An ergonomic desk that can be adjusted for sitting or standing.",
+    "price": 4500000,
+    "totalUpVote": 150,
+    "CategoryId": 3,
+    "productImg": "https://th.bing.com/th/id/OIP.bBGYNQHrwTD8i7TqDFQOPgHaHa?w=172&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7",
+    "stock": 20
+  },
+  {
+    "id": 5,
+    "name": "Portable Blender",
+    "description": "A compact blender for smoothies and shakes on the go.",
+    "price": 500000,
+    "totalUpVote": 0,
+    "CategoryId": 1,
+    "productImg": "https://th.bing.com/th/id/OIP.W6NImJw3PY8Y5-ghN3nEUwHaHa?w=178&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7",
+    "stock": 75
+  }
+]

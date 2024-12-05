@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Prent",
+    "email": "pneno0@army.mil",
+    "password": "cU2)E7D",
+    "role": "Buyer",
+    "isVerified": false
+  },
+  {
+    "id": 2,
+    "name": "Wynne",
+    "email": "wnellen1@gnu.org",
+    "password": "aZ4}Gv",
+    "role": "Seller",
+    "isVerified": false
+  },
+  {
+    "id": 3,
+    "name": "Roxi",
+    "email": "rkuhndel2@ifeng.com",
+    "password": "tR7*'1",
+    "role": "Seller",
+    "isVerified": false
+  },
+  {
+    "id": 4,
+    "name": "Veronica",
+    "email": "vletteresse3@statcounter.com",
+    "password": "fV3%+i",
+    "role": "Buyer",
+    "isVerified": false
+  },
+  {
+    "id": 5,
+    "name": "Dud",
+    "email": "dwinch4@dropbox.com",
+    "password": "mW9~=_",
+    "role": "Buyer",
+    "isVerified": false
+  }
+]

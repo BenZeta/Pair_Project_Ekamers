@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "username": "Adrian",
+    "profileImg": "http://dummyimage.com/160x100.png/dddddd/000000",
+    "UserId": 1
+  },
+  {
+    "id": 2,
+    "username": "Brandy",
+    "profileImg": "http://dummyimage.com/212x100.png/ff4444/ffffff",
+    "UserId": 2
+  },
+  {
+    "id": 3,
+    "username": "Dredi",
+    "profileImg": "http://dummyimage.com/194x100.png/cc0000/ffffff",
+    "UserId": 3
+  },
+  {
+    "id": 4,
+    "username": "Janela",
+    "profileImg": "http://dummyimage.com/184x100.png/cc0000/ffffff",
+    "UserId": 4
+  },
+  {
+    "id": 5,
+    "username": "Pierre",
+    "profileImg": "http://dummyimage.com/135x100.png/cc0000/ffffff",
+    "UserId": 5
+  }
+]
