@@ -5,14 +5,14 @@ require("dotenv").config();
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user: "benpardcomede3@gmail.com",
+    pass: "mwfn kqvh etgr bpsq",
   },
 });
 
 const sendCheckoutEmail = async (orderDetails, recipientEmail) => {
   const mailOptions = {
-    from: process.env.EMAIL_USER,
+    from: "benpardede3@gmail.com",
     to: recipientEmail,
     subject: "Order Confirmation",
     html: `
