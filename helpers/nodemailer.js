@@ -9,6 +9,10 @@ const transporter = nodemailer.createTransport({
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
   },
+  secure: true,
+  port: 465,
+  logger: true, // Enable logger
+  debug: true, // Show debug information
 });
 
 const sendCheckoutEmail = async (orderDetails, recipientEmail) => {
