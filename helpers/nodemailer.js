@@ -2,17 +2,18 @@ const nodemailer = require("nodemailer");
 const getRupiahFormat = require("./getRupiahFormat");
 require("dotenv").config();
 
+// Create a transporter object using your email service (Gmail)
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "benpardede3@gmail.com",
-    pass: "psrk vmni jida zkod",
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
   },
 });
 
 const sendCheckoutEmail = async (orderDetails, recipientEmail) => {
   const mailOptions = {
-    from: "benpardede3@gmail.com",
+    from: process.env.EMAIL_USER,
     to: recipientEmail,
     subject: "Order Confirmation",
     html: `
