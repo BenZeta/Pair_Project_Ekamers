@@ -35,14 +35,14 @@ module.exports = (sequelize, DataTypes) => {
     user.password = hash;
   });
 
-  User.beforeBulkUpdate((user) => {
-    try {
-      const hash = bcrypt.hashSync(user.attributes.password, 10);
-      user.attributes.password = hash;
-    } catch (error) {
-      console.log(error);
-    }
-  });
+  // User.beforeBulkUpdate((user) => {
+  //   try {
+  //     const hash = bcrypt.hashSync(user.attributes.password, 10);
+  //     user.attributes.password = hash;
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // });
 
   return User;
 };

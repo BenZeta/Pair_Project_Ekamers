@@ -143,7 +143,6 @@ class AuthController {
         }
       }
       const products = await Product.findAll(options);
-      console.log(products);
 
       const profile = await Profile.findOne({
         where: {
@@ -165,7 +164,6 @@ class AuthController {
       if (req.query.error) {
         errors = req.query.error;
       }
-      console.log(errors);
 
       const user = await User.findOne({
         where: {
@@ -182,11 +180,11 @@ class AuthController {
 
   static async updateProfile(req, res) {
     try {
-      const { username, email, password, profileImg } = req.body;
+      const { username, email, profileImg } = req.body;
       req.session.email = email;
 
       await User.update(
-        { email, password },
+        { email },
         {
           where: {
             id: req.session.userId,
@@ -195,13 +193,14 @@ class AuthController {
       );
 
       await Profile.update(
-        { username, profileImg },
+        { username: Profile.upperCaseFirstLetter(username), profileImg },
         {
           where: {
-            id: req.session.userId,
+            UserId: req.session.userId,
           },
         }
       );
+
       res.redirect("/home");
     } catch (error) {
       if (error.name === "SequelizeUniqueConstraintError") {
@@ -210,6 +209,8 @@ class AuthController {
         });
         res.redirect(`/profile?error=${errors}`);
       } else {
+        console.log(error);
+
         res.send(error);
       }
     }

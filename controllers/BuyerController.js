@@ -125,7 +125,6 @@ class BuyerController {
       }
 
       const orderId = carts.map((item) => item.id).join("-");
-      console.log(req.session);
 
       const mappedData = {
         id: orderId,
