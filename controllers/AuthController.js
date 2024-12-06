@@ -163,10 +163,9 @@ class AuthController {
     try {
       let errors;
       if (req.query.error) {
-        errors = req.query.error
+        errors = req.query.error;
       }
       console.log(errors);
-      
 
       const user = await User.findOne({
         where: {
@@ -184,6 +183,7 @@ class AuthController {
   static async updateProfile(req, res) {
     try {
       const { username, email, password, profileImg } = req.body;
+      req.session.email = email;
 
       await User.update(
         { email, password },
