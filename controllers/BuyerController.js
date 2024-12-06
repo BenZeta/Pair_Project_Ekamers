@@ -135,7 +135,7 @@ class BuyerController {
         })),
         totalPrice: carts.reduce((total, cart) => total + cart.Product.price * cart.stockProduct, 0),
       };
-
+      
       await sequelize.transaction(async (t) => {
         for (const cartItem of carts) {
           const product = cartItem.Product;

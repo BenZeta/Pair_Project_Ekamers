@@ -36,7 +36,6 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   User.beforeBulkUpdate((user) => {
-    console.log(user, "BEFORE");
     try {
       const hash = bcrypt.hashSync(user.attributes.password, 10);
       user.attributes.password = hash;

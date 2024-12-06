@@ -143,6 +143,7 @@ class AuthController {
         }
       }
       const products = await Product.findAll(options);
+      console.log(products);
 
       const profile = await Profile.findOne({
         where: {
@@ -160,6 +161,13 @@ class AuthController {
 
   static async profile(req, res) {
     try {
+      let errors;
+      if (req.query.error) {
+        errors = req.query.error
+      }
+      console.log(errors);
+      
+
       const user = await User.findOne({
         where: {
           id: req.session.userId,
@@ -167,7 +175,7 @@ class AuthController {
         include: Profile,
       });
 
-      res.render("auth_page/profile.ejs", { user });
+      res.render("auth_page/profile.ejs", { user, errors });
     } catch (error) {
       res.send(error);
     }
@@ -196,7 +204,14 @@ class AuthController {
       );
       res.redirect("/home");
     } catch (error) {
-      res.send(error);
+      if (error.name === "SequelizeUniqueConstraintError") {
+        const errors = error.errors.map((err) => {
+          return err.message;
+        });
+        res.redirect(`/profile?error=${errors}`);
+      } else {
+        res.send(error);
+      }
     }
   }
 

@@ -34,6 +34,9 @@
               <span class="label-text text-gray-700">Email</span>
             </label>
             <input type="email" name="email" value="<%= user.email %>" class="bg-white input input-bordered border-lime-600 focus:ring-lime-500" placeholder="Enter your email" />
+            <% if (errors && errors.includes("email must be unique")) { %>
+            <p class="text-red-500 text-sm mt-2">Email has been taken. Please choose another email!</p>
+            <% } %>
           </div>
 
           <div class="form-control">
